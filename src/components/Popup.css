@@ -1,0 +1,131 @@
+/* components/Popup.css */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease; /* Smooth fade-in animation */
+  }
+  
+  .popup-content {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transform: scale(0.95);
+    animation: popupSlideUp 0.3s ease forwards; /* Slide-up effect */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .close-button:hover {
+    color: #ff5c5c; /* Hover effect for close button */
+  }
+  
+  .popup-details {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .popup-text {
+    flex: 2;
+    overflow-y: auto;
+    max-width: 440px;
+    word-break: break-word;
+  }
+  
+  .popup-text h2 {
+    color: #0056b3;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  
+  .popup-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Image shadow */
+    transition: transform 0.3s ease; /* Hover effect */
+  }
+  
+  .popup-image img:hover {
+    transform: scale(1.05); /* Zoom on hover */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Slide-up animation */
+  @keyframes popupSlideUp {
+    from { transform: translateY(20px) scale(0.95); }
+    to { transform: translateY(0) scale(1); }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .popup-content {
+      flex-direction: column;
+      height: auto;
+      max-height: 90vh;
+      width: 100%;
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .popup-details {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .popup-text h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .popup-image img {
+      max-width: 80%;
+      max-height: 200px;
+    }
+  
+    .popup-text p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+  }
+  

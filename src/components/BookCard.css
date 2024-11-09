@@ -1,0 +1,97 @@
+/* Base styles for the book card */
+.book-card {
+  max-width: 220px;
+  /* max-height: 450px;
+  overflow: hidden; */
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  margin: 8px;
+}
+.book-card p{
+max-height: 3em;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.book-card .author{
+  font-size: 14px;
+
+}
+.book-card h3{
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+/* Image inside the card */
+.book-cover {
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Text styles */
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #333;
+}
+
+.book-author {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust card size for tablet */
+  .book-card {
+    max-width: 200px;
+    padding: 12px;
+  }
+
+  .book-title {
+    font-size: 15px;
+  }
+  .book-card img{
+    width: 100%;
+    object-fit: contain;
+  }
+  .book-author {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust for mobile */
+  .book-card {
+    max-width: 210px;
+    padding: 10px;
+  }
+
+  .book-cover {
+    max-height: 120px;
+  }
+  .book-card img{
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .book-title {
+    font-size: 14px;
+  }
+
+  .book-author {
+    font-size: 12px;
+  }
+}
